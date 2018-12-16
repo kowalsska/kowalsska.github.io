@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Dec 2018 17:28:50 +0100</pubDate>
       
       <guid>https://kowalsska.github.io/blog/van-building/</guid>
-      <description>This is my van</description>
+      <description>In June 2017 I started converting my van into a mobile home. It took a whole year to finish. In the meantime I quit my job, went traveling in Asia. Spent NYE in Wuhan, China. Worked at a farm on an inhabited island. Swam in the Dead Sea. These are some photos showing the process.</description>
     </item>
     
     <item>
@@ -26,21 +26,7 @@
       <pubDate>Sun, 16 Dec 2018 04:05:25 -0600</pubDate>
       
       <guid>https://kowalsska.github.io/blog/first-steps-with-machine-learning/</guid>
-      <description>Mniam mniam
-Bool What am I doing
- &amp;ldquo;The halls are nothing but rooms, and it is with difficulty that the air can be changed in them.&amp;rdquo;
- This conversation took place in the gallery dining-room on the ground-floor. The Bishop remained silent for a moment; then he turned abruptly to the director of the hospital.</description>
-    </item>
-    
-    <item>
-      <title>colophon</title>
-      <link>https://kowalsska.github.io/about/colophon/</link>
-      <pubDate>Sat, 22 Aug 2015 06:28:26 -0700</pubDate>
-      
-      <guid>https://kowalsska.github.io/about/colophon/</guid>
-      <description>This website is a personal homepage.
-The site is built with Hugo—a static site generator made with Go. The website source code is available on GitHub. It uses the cocoa theme. The posts are written in Markdown.
-The primary font face is Open Sans and the monospace font face is Ubuntu Mono. The social icons are from the Ionicons font set. CSS classes for code syntax highlighting are inserted during compile-time by Hugo using Pygments.</description>
+      <description>I have decided to learn machine learning. I will post here once I achieve anything, i.e. create some models, have some graphs to show. Stay tuned.</description>
     </item>
     
   </channel>
