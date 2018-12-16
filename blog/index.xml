@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Dec 2018 17:28:50 +0100</pubDate>
       
       <guid>https://kowalsska.github.io/blog/i-built-a-campervan/</guid>
-      <description>.container { margin: auto; max-width: 1200px; justify-content: space-between; } .responsive-image { max-width: 100%; } .cell img { display: block; } @media screen and (min-width: 600px) { .grid { display: flex; flex-wrap: wrap; flex-direction: row; } .cell { width: 50%; } } @media screen and (min-width: 1000px) { .cell { width: calc(100% / 3); } }  In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond).</description>
+      <description>.container { margin: auto; max-width: 1200px; justify-content: space-around; } .responsive-image { max-width: 100%; } .cell img { display: block; } @media screen and (min-width: 600px) { .grid { display: flex; flex-wrap: wrap; flex-direction: row; } .cell { width: 50%; } } @media screen and (min-width: 1000px) { .cell { width: calc(100% / 3); } }  In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond).</description>
     </item>
     
     <item>
