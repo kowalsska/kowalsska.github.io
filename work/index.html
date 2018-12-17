@@ -42,11 +42,11 @@
 
 
     
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/reset.css?t=2018-12-17%2018%3a35%3a55.500716%20%2b0100%20CET%20m%3d%2b0.078431612">
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/pygments.css?t=2018-12-17%2018%3a35%3a55.500716%20%2b0100%20CET%20m%3d%2b0.078431612">
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/main.css?t=2018-12-17%2018%3a35%3a55.500716%20%2b0100%20CET%20m%3d%2b0.078431612">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/reset.css?t=2018-12-17%2019%3a13%3a43.556861%20%2b0100%20CET%20m%3d%2b0.061548039">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/pygments.css?t=2018-12-17%2019%3a13%3a43.556861%20%2b0100%20CET%20m%3d%2b0.061548039">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/main.css?t=2018-12-17%2019%3a13%3a43.556861%20%2b0100%20CET%20m%3d%2b0.061548039">
     
-        <link rel="stylesheet" href="https://kowalsska.github.io/css/override.css?t=2018-12-17%2018%3a35%3a55.500716%20%2b0100%20CET%20m%3d%2b0.078431612">
+        <link rel="stylesheet" href="https://kowalsska.github.io/css/override.css?t=2018-12-17%2019%3a13%3a43.556861%20%2b0100%20CET%20m%3d%2b0.061548039">
     
 
 
@@ -166,170 +166,362 @@
 
             <div class="markdown">
                 <style type="text/css">
+.timeline{
+  --uiTimelineMainColor: var(--timelineMainColor, #222);
+  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
 
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
+.timeline:before{
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: var(--uiTimelineMainColor);
+
   position: absolute;
-  width: 6px;
-  background-color: grey;
   top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
 }
 
-/* Container around content */
-.acontainer {
-  padding: 10px 40px;
+.timeline__group{
   position: relative;
-  background-color: inherit;
-  width: 50%;
 }
 
-/* The circles on the timeline */
-.acontainer::after {
-  content: '';
+.timeline__group:not(:first-of-type){
+  margin-top: 4rem;
+}
+
+.timeline__year{
+  padding: .5rem 1.5rem;
+  color: var(--uiTimelineSecondaryColor);
+  background-color: var(--uiTimelineMainColor);
+
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid black;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
   left: 0;
+  top: 0;
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.acontent {
-  padding: 5px 10px;
-  border: solid;
-  border-radius: 5px;
-  background-color: white;
+.timeline__box{
   position: relative;
-  border-radius: 6px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
+.timeline__box:not(:last-of-type){
+  margin-bottom: 30px;
+}
+
+.timeline__box:before{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--uiTimelineMainColor);
+
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.timeline__date{
+  min-width: 65px;
+  position: absolute;
+  left: 0;
+
+  box-sizing: border-box;
+  padding: .5rem 1.5rem;
+  text-align: center;
+
+  background-color: var(--uiTimelineMainColor);
+  color: var(--uiTimelineSecondaryColor);
+}
+
+.timeline__day{
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.timeline__month{
+  display: block;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+.timeline__post{
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  border-left: 3px solid var(--uiTimelineMainColor);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+  background-color: var(--uiTimelineSecondaryColor);
+}
+
+@media screen and (min-width: 641px){
+
+  .timeline:before{
+    left: 30px;
   }
 
-/* Full-width containers */
-  .acontainer {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+  .timeline__group{
+    padding-top: 55px;
   }
 
-/* Make sure that all arrows are pointing leftwards */
-  .acontainer::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  .timeline__box{
+    padding-left: 80px;
   }
 
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
+  .timeline__box:before{
+    top: 50%;
+    transform: translateY(-50%);  
+  }  
+
+  .timeline__date{
+    top: 50%;
+    margin-top: -27px;
+  }
+}
+
+@media screen and (max-width: 640px){
+
+  .timeline:before{
+    left: 0;
   }
 
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
+  .timeline__group{
+    padding-top: 40px;
   }
+
+  .timeline__box{
+    padding-left: 20px;
+    padding-top: 70px;
+  }
+
+  .timeline__box:before{
+    top: 90px;
+  }    
+
+  .timeline__date{
+    top: 0;
+  }
+}
+
+.timeline{
+  --timelineMainColor: #31592F;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  html{
+    font-size: 55%;
+  }
+}
+
+/*
+* demo page
+*/
+
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 13px !important;
+}
+
+p:last-child{
+  margin-bottom: 0;
+}
+
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page__demo{
+  flex-grow: 1;
+}
+
+.main-container{
+  max-width: 960px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page__container{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 800px;
+}
+
+.footer{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;  
+  font-size: 1.4rem;
+}
+
+.footer__link{
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 361px){
+
+  .footer__container{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 360px){
+
+  .melnik909{
+    display: none;
+  } 
 }   
 </style>
 
-<div class="timeline">
-  <div class="acontainer left">
-    <div class="acontent">
-      <span>April 2018 till now</span>
-      <h2>OhmConnect</h2>
-      <span>Full Stack Engineer</span>
-      <p>Lorem ipsum..</p>
+<div class="page">
+  <div class="page__demo">
+    <div class="main-container page__container">
+      <div class="timeline">
+        <div class="timeline__group">
+          <span class="timeline__year">2018</span>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">15</span>
+              <span class="timeline__month">APR</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I started my first remote job as a Full Stack Developer at OhmConnect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__group">
+          <span class="timeline__year">2017</span>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">31</span>
+              <span class="timeline__month">Aug</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I quit my job at Morgan Stanley and go traveling.</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">25</span>
+              <span class="timeline__month">May</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I became a mentor at Code Your Future where I taught Javascript programming to asylum seekers living in Glasgow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__group">
+          <span class="timeline__year">2016</span>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">1</span>
+              <span class="timeline__month">Aug</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I started as an Associate Software Developer at Morgan Stanley in Glasgow, UK. I worked in the MS Development Environment Team. Bla bla</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">23</span>
+              <span class="timeline__month">Jul</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I get invited by Bending Spoons to attend their conference in Copenhagen for 20 the best computer science students in Europe.</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">27</span>
+              <span class="timeline__month">Jun</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I graduate with a 2.1 in BSc Mobile Software Engineering and received a prize for contribution to the Computer Science School.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__group">
+            <span class="timeline__year">2015</span>
+        </div>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">3</span>
+              <span class="timeline__month">Jun</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I did a 3 month long summer internship at Morgan Stanley in Glasgow, UK.</p>
+              </div>
+            </div>
+          </div>
+        <div class="timeline__group">
+            <span class="timeline__year">2013</span>
+                      <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">1</span>
+              <span class="timeline__month">Jun</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I completed my first internship at ExplainEverything in Wroclaw, Poland. 
+                I learned about iOS apps development. For the first time I worked in a professional environment and was
+            personally responsible for delivering a set of test cases for the apps.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline__group">
+            <span class="timeline__year">2012</span>
+        </div>
+          <div class="timeline__box">
+            <div class="timeline__date">
+              <span class="timeline__day">15</span>
+              <span class="timeline__month">Sep</span>
+            </div>
+            <div class="timeline__post">
+              <div class="timeline__content">
+                <p>I started BSc in Mobile Software Engineering at University of Glasgow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="acontainer right">
-    <div class="acontent">
-      <span>August 2016 till September 2017</span>
-      <h2>Morgan Stanley</h2>
-      <span>Associate Software Developer</span>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="acontainer left">
-    <div class="acontent">
-      <span>June 2018</span>
-      <h2>FemEng in Rwanda</h2>
-      <span>Mentor</span>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-  <div class="acontainer right">
-    <div class="acontent">
-      <span>September 2012 till May 2016</span>
-      <h2>University of Glasgow</h2>
-      <span>BSc Mobile Software Engineering</span>
-      <p>Lorem ipsum..</p>
-    </div>
-  </div>
-</div> 
+</div>
 
             </div>
             
