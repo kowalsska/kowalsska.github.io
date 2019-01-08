@@ -42,11 +42,11 @@
 
 
     
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/reset.css?t=2018-12-17%2020%3a44%3a00.244171%20%2b0100%20CET%20m%3d%2b0.069899011">
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/pygments.css?t=2018-12-17%2020%3a44%3a00.244171%20%2b0100%20CET%20m%3d%2b0.069899011">
-    <link rel="stylesheet" href="https://kowalsska.github.io/css/main.css?t=2018-12-17%2020%3a44%3a00.244171%20%2b0100%20CET%20m%3d%2b0.069899011">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/reset.css?t=2019-01-08%2013%3a19%3a57.367273%20%2b0100%20CET%20m%3d%2b0.068388959">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/pygments.css?t=2019-01-08%2013%3a19%3a57.367273%20%2b0100%20CET%20m%3d%2b0.068388959">
+    <link rel="stylesheet" href="https://kowalsska.github.io/css/main.css?t=2019-01-08%2013%3a19%3a57.367273%20%2b0100%20CET%20m%3d%2b0.068388959">
     
-        <link rel="stylesheet" href="https://kowalsska.github.io/css/override.css?t=2018-12-17%2020%3a44%3a00.244171%20%2b0100%20CET%20m%3d%2b0.069899011">
+        <link rel="stylesheet" href="https://kowalsska.github.io/css/override.css?t=2019-01-08%2013%3a19%3a57.367273%20%2b0100%20CET%20m%3d%2b0.068388959">
     
 
 
@@ -80,6 +80,10 @@
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -139,11 +143,15 @@
         
 
         
+            <a href="//angel.co/kowalsska" target="_blank" rel="noopener"><img class="icon" src="https://kowalsska.github.io/img/angel.svg" alt="angel" /></a>
+        
+
+        
 
         
 
         
-            <a href="mailto:kowalsska2@gmail.com"><img class="icon" src="https://kowalsska.github.io/img/email.svg" alt="email" /></a>
+            <a href="mailto:kowalsska.dev@gmail.com"><img class="icon" src="https://kowalsska.github.io/img/email.svg" alt="email" /></a>
         
 
         
@@ -166,360 +174,159 @@
 
             <div class="markdown">
                 <style type="text/css">
-.timeline{
-  --uiTimelineMainColor: var(--timelineMainColor, #222);
-  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
-
-  position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.item-container {
+  display: grid;
+  grid-template-columns: [first] 50px [line2] 250px [line3] auto [line4] 150px [end];
+  grid-template-rows: [row1] 50px [row2] auto [row3];
+  grid-column-gap: 10px;
+  margin-bottom: 20px;
+}
+.avatar {
+  border-radius: 50%;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  max-width: 50px;
 }
 
-.timeline:before{
-  content: "";
-  width: 4px;
-  height: 100%;
-  background-color: var(--uiTimelineMainColor);
-
-  position: absolute;
-  top: 0;
+.item-avatar {
+  grid-column-start: first;
+  grid-column-end: span line2;
+  grid-row-start: row1;
+  grid-row-end: span row2;
+  align-self: center;
 }
-
-.timeline__group{
-  position: relative;
+.item-name {
+  grid-column-start: line2;
+  grid-column-end: span line4;
+  grid-row-start: row1;
+  grid-row-end: span row2;
+  align-self: center;
 }
-
-.timeline__group:not(:first-of-type){
-  margin-top: 4rem;
+.item-date {
+  grid-column-start: line4;
+  grid-column-end: span end;
+  grid-row-start: row1;
+  grid-row-end: span row2;
+  align-self: center;
+  justify-self: end;
 }
-
-.timeline__year{
-  padding: .5rem 1.5rem;
-  color: var(--uiTimelineSecondaryColor);
-  background-color: var(--uiTimelineMainColor);
-
-  position: absolute;
-  left: 0;
-  top: 0;
+.item-description {
+  grid-column-start: line2;
+  grid-column-end: span end;
+  grid-row-start: row2;
+  grid-row-end: span row3;
 }
-
-.timeline__box{
-  position: relative;
+.company-name {
+  font-weight: 500;
+  font-size: 13pt;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 }
-
-.timeline__box:not(:last-of-type){
-  margin-bottom: 30px;
+.company-date {
+  font-weight: 300;
+  font-size: 10pt;
+  text-transform: uppercase;
 }
-
-.timeline__box:before{
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: var(--uiTimelineMainColor);
-
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
-
-.timeline__date{
-  min-width: 65px;
-  position: absolute;
-  left: 0;
-
-  box-sizing: border-box;
-  padding: .5rem 1.5rem;
-  text-align: center;
-
-  background-color: var(--uiTimelineMainColor);
-  color: var(--uiTimelineSecondaryColor);
-}
-
-.timeline__day{
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-}
-
-.timeline__month{
-  display: block;
-  font-size: .8em;
+.skills {
+  font-weight: 100 !important;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 9pt !important;
   text-transform: uppercase;
 }
 
-.timeline__post{
-  padding: 1.5rem 2rem;
-  border-radius: 2px;
-  border-left: 3px solid var(--uiTimelineMainColor);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-  background-color: var(--uiTimelineSecondaryColor);
-}
-
-@media screen and (min-width: 641px){
-
-  .timeline:before{
-    left: 30px;
-  }
-
-  .timeline__group{
-    padding-top: 55px;
-  }
-
-  .timeline__box{
-    padding-left: 80px;
-  }
-
-  .timeline__box:before{
-    top: 50%;
-    transform: translateY(-50%);  
-  }  
-
-  .timeline__date{
-    top: 50%;
-    margin-top: -27px;
-  }
-}
-
-@media screen and (max-width: 640px){
-
-  .timeline:before{
-    left: 0;
-  }
-
-  .timeline__group{
-    padding-top: 40px;
-  }
-
-  .timeline__box{
-    padding-left: 20px;
-    padding-top: 70px;
-  }
-
-  .timeline__box:before{
-    top: 90px;
-  }    
-
-  .timeline__date{
-    top: 0;
-  }
-}
-
-.timeline{
-  --timelineMainColor: #31592F;
-  font-size: 16px;
-}
-
-@media screen and (min-width: 768px){
-
-  html{
-    font-size: 62.5%;
-  }
-}
-
-@media screen and (max-width: 767px){
-
-  html{
-    font-size: 55%;
-  }
-}
-
-/*
-* demo page
-*/
-
-p{
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-size: 13px !important;
-}
-
-p:last-child{
-  margin-bottom: 0;
-}
-
-.page{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.page__demo{
-  flex-grow: 1;
-}
-
-.main-container{
-  max-width: 960px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page__container{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  max-width: 800px;
-}
-
-.footer{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-align: center;  
-  font-size: 1.4rem;
-}
-
-.footer__link{
-  text-decoration: none;
-  color: inherit;
-}
-
-@media screen and (min-width: 361px){
-
-  .footer__container{
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 360px){
-
-  .melnik909{
-    display: none;
-  } 
-}   
 </style>
 
-<div class="page">
-  <div class="page__demo">
-    <div class="main-container page__container">
-      <div class="timeline">
-        <div class="timeline__group">
-          <span class="timeline__year">2018</span>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">15</span>
-              <span class="timeline__month">APR</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I started my first remote job as a Full Stack Developer at OhmConnect.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="timeline__group">
-          <span class="timeline__year">2017</span>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">31</span>
-              <span class="timeline__month">Aug</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I quit my job at Morgan Stanley and go traveling.</p>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">25</span>
-              <span class="timeline__month">May</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I became a mentor at Code Your Future where I taught Javascript programming to asylum seekers living in Glasgow.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="timeline__group">
-          <span class="timeline__year">2016</span>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">1</span>
-              <span class="timeline__month">Aug</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I started as an Associate Software Developer at Morgan Stanley in Glasgow, UK. I worked in the MS Development Environment Team. Bla bla</p>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">23</span>
-              <span class="timeline__month">Jul</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I get invited by Bending Spoons to attend their conference in Copenhagen for 20 the best computer science students in Europe.</p>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">27</span>
-              <span class="timeline__month">Jun</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I graduate with a 2.1 in BSc Mobile Software Engineering and received a prize for contribution to the Computer Science School.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="timeline__group">
-            <span class="timeline__year">2015</span>
-        </div>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">3</span>
-              <span class="timeline__month">Jun</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I did a 3 month long summer internship at Morgan Stanley in Glasgow, UK.</p>
-              </div>
-            </div>
-          </div>
-        <div class="timeline__group">
-            <span class="timeline__year">2013</span>
-                      <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">1</span>
-              <span class="timeline__month">Jun</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I completed my first internship at ExplainEverything in Wroclaw, Poland. 
-                I learned about iOS apps development. For the first time I worked in a professional environment and was
-            personally responsible for delivering a set of test cases for the apps.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="timeline__group">
-            <span class="timeline__year">2012</span>
-        </div>
-          <div class="timeline__box">
-            <div class="timeline__date">
-              <span class="timeline__day">15</span>
-              <span class="timeline__month">Sep</span>
-            </div>
-            <div class="timeline__post">
-              <div class="timeline__content">
-                <p>I started BSc in Mobile Software Engineering at University of Glasgow</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="item-container">
+  <div class=item-avatar>
+    <img class="avatar" height="50px" src='https://kowalsska.github.io/img/question.png'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Next dream job at ...</span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">Whenever - later</span>
+  </div>
+  <div class="item-description">
+    <p>I’m looking for a meaningful job at a small size company that brings a real change to the world and is not interested in just making money. I'd love to work with open minded and passionate people who love their job and don’t agree for mediocrity. Preferably the project would have something to do with AI/ML, because that's what I've been trying to learn recently and I find it exciting.</p>
+    <p class="skills">#i #am #excited #to #learn #anything</p>
+  </div>
+</div>
+
+<div class="item-container">
+  <div class=item-avatar>
+    <img class="avatar" height="50px" src='https://www.mymoneyblog.com/wordpress/wp-content/uploads/2017/05/ohmlogo.gif'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Full Stack Engineer at <a href="https://www.ohmconnect.com/">Ohm Connect</a></span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">Apr 2018 - now</span>
+  </div>
+  <div class="item-description">
+    <p>Working remotely as a Full Stack Engineer, I use Python (Flask, MySQL) and Javascript (Vue.js, jQuery, HTML, CSS) to create a super cool website that aims at reducing California's carbon footprint by encouraging people to cut down on their electricity consumption during power plants' peak demand times.</p>
+    <p class="skills">#python #flask #mysql #javascript #vuejs #html #css</p>
+  </div>
+</div>
+
+<div class="item-container">
+  <div class="item-avatar">
+    <img class="avatar" height="50px" src='https://theturingtrust.files.wordpress.com/2018/03/code-your-future1.jpg'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Mentor at <a href="https://codeyourfuture.io/">Code Your Future</a></span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">Jun 2017 - Sep 2017</span>
+  </div>
+  <div class="item-description">
+    <p>I volunteered as a mentor/teacher in weekly coding classes for asylum seekers living in Scotland. Currently teaching Javascript.</p>
+    <p class="skills">#javascript #teaching</p>
+  </div>
+</div>
+
+<div class="item-container">
+  <div class="item-avatar">
+    <img class="avatar" height="50px" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTORATwaXDC5wclnBoPe1wazADE2kQX8vRK_rlifqFhQlrvRt3E'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Software Developer Associate at <a href="https://www.morganstanley.com/">Morgan Stanley</a></span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">Aug 2016 - Sep 2017</span>
+  </div>
+  <div class="item-description">
+    <p>I worked in MS Development Environment Team and created a tool for automating software decommission process. It was challenging but boring at the same time. Apparently it was going to save millions of dollars for the company... At least I got to learn a lot of Python and Typescript along the way. P.S. Please don't contact me with offers from the finance industry.</p>
+    <p class="skills">#python #scala #javascript #angular2 #html #css</p>
+  </div>
+</div>
+
+<div class="item-container">
+  <div class="item-avatar">
+    <img class="avatar" height="50px" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTORATwaXDC5wclnBoPe1wazADE2kQX8vRK_rlifqFhQlrvRt3E'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Software Developer Intern at <a href="https://www.morganstanley.com/">Morgan Stanley</a></span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">Jun 2015 - Sep 2015</span>
+  </div>
+  <div class="item-description">
+    <p>I worked as a summer intern in the Morgan Stanley Development Environment team and was responsible for adding new features to a website which was an internal tool for software developers. I used Java and Javascript.</p>
+    <p class="skills">#python #scala #javascript #angular2 #html #css</p>
+  </div>
+</div>
+
+<div class="item-container">
+  <div class="item-avatar">
+    <img class="avatar" height="50px" src='https://is4-ssl.mzstatic.com/image/thumb/Purple124/v4/e3/2a/37/e32a37c3-4a23-b3b2-c137-b64ef2df8d82/Explain_PRO-0-1x_U007emarketing-0-0-85-220-0-6.png/246x0w.jpg'>
+  </div>
+  <div class="item-name">
+    <span class="company-name">Software Developer Intern at <a href="https://explaineverything.com/">Explain Everything</a></span>
+  </div>
+  <div class="item-date">
+    <span class="company-date">May 2013 - Jun 2013</span>
+  </div>
+  <div class="item-description">
+    <p>In a team of QA engineers we came up with testing strategy for apps developed at MorrisCooke and I was responsible for testing the apps on iPads and report bugs to software engineers. As a separate task I created a manual for one of the apps using HTML and CSS. I familiarised myself with Xcode and learned about agile software development.</p>
+    <p class="skills">#ios #qa #testing</p>
   </div>
 </div>
 
@@ -529,17 +336,6 @@ p:last-child{
     </div>
 </section>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 
 

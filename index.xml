@@ -6,10 +6,19 @@
     <description>Recent content on Magda Kowalska</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 16 Dec 2018 17:28:50 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jan 2019 09:43:57 +0100</lastBuildDate>
     
 	<atom:link href="https://kowalsska.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What has Permaculture to do with Software Engineering</title>
+      <link>https://kowalsska.github.io/blog/what-has-permaculture-to-do-with-software-engineering/</link>
+      <pubDate>Tue, 08 Jan 2019 09:43:57 +0100</pubDate>
+      
+      <guid>https://kowalsska.github.io/blog/what-has-permaculture-to-do-with-software-engineering/</guid>
+      <description>Working on the content</description>
+    </item>
     
     <item>
       <title>I built a campervan</title>
