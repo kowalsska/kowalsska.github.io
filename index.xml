@@ -6,36 +6,18 @@
     <description>Recent content on Magda Kowalska</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 08 Jan 2019 09:43:57 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 16 Dec 2018 17:28:50 +0100</lastBuildDate>
     
 	<atom:link href="https://kowalsska.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>What has Permaculture to do with Software Engineering</title>
-      <link>https://kowalsska.github.io/blog/what-has-permaculture-to-do-with-software-engineering/</link>
-      <pubDate>Tue, 08 Jan 2019 09:43:57 +0100</pubDate>
-      
-      <guid>https://kowalsska.github.io/blog/what-has-permaculture-to-do-with-software-engineering/</guid>
-      <description>Working on the content</description>
-    </item>
-    
-    <item>
-      <title>I built a campervan</title>
-      <link>https://kowalsska.github.io/blog/i-built-a-campervan/</link>
+      <title>My campervan conversion</title>
+      <link>https://kowalsska.github.io/blog/my-campervan-conversion/</link>
       <pubDate>Sun, 16 Dec 2018 17:28:50 +0100</pubDate>
       
-      <guid>https://kowalsska.github.io/blog/i-built-a-campervan/</guid>
+      <guid>https://kowalsska.github.io/blog/my-campervan-conversion/</guid>
       <description>.acontainer { margin: auto; max-width: 1200px; justify-content: space-between; } .responsive-image { max-width: 100%; } .acell img { display: flex; } .acell { margin-right: 5px; } @media screen and (min-width: 600px) { .agrid { display: flex; flex-wrap: wrap; flex-direction: row; } .acell { width: 50%; } } @media screen and (min-width: 300px) { .acell { width: calc(100% / 3); } }  In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond).</description>
-    </item>
-    
-    <item>
-      <title>First steps with Machine Learning</title>
-      <link>https://kowalsska.github.io/blog/first-steps-with-machine-learning/</link>
-      <pubDate>Sun, 16 Dec 2018 04:05:25 -0600</pubDate>
-      
-      <guid>https://kowalsska.github.io/blog/first-steps-with-machine-learning/</guid>
-      <description>I have decided to learn machine learning. I will post here once I achieve anything, i.e. create some models, have some graphs to show. Stay tuned. Bla bla</description>
     </item>
     
   </channel>
