@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Dec 2018 17:28:50 +0100</pubDate>
       
       <guid>https://kowalsska.github.io/blog/my-campervan-conversion/</guid>
-      <description>.acontainer { margin: auto; max-width: 1200px; justify-content: space-between; } .responsive-image { max-width: 100%; } .acell img { display: flex; } .acell { margin-right: 5px; } @media screen and (min-width: 600px) { .agrid { display: flex; flex-wrap: wrap; flex-direction: row; } .acell { width: 50%; } } @media screen and (min-width: 300px) { .acell { width: calc(100% / 3); } }  In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond).</description>
+      <description>.row { display: flex; justify-content: space-between; }  In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond). Having spent a big chunk of my childhood traveling in a campervan with my family, it seemed like an obvious thing to do. After an initial first month of working on the van I didn&amp;rsquo;t get very far but was super stoked on the idea.</description>
     </item>
     
   </channel>
