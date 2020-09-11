@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Work experience on Made by Magda</title>
+    <title>Work on Magda Kowalska</title>
     <link>https://kowalsska.github.io/work/</link>
-    <description>Recent content in Work experience on Made by Magda</description>
+    <description>Recent content in Work on Magda Kowalska</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 16 Dec 2018 21:22:35 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 21:09:48 -1000</lastBuildDate>
     
 	<atom:link href="https://kowalsska.github.io/work/index.xml" rel="self" type="application/rss+xml" />
     
