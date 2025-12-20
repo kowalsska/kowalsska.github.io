@@ -12,7 +12,27 @@
 &lt;p&gt;As my final year university project I decided to develop a mobile app. It&amp;rsquo;s a location based photo sharing app that I called Teleport. The project aimed at researching a new way through which people could communicate with each other. Taking into account all the existing photo sharing and communication apps, I came up with a novel idea where the users can request content from anywhere on a map and receive pictures of the locations that are only visible for a limited amount of time. Basically, the app allows you to &lt;span style='font-style: italic'&gt;teleport&lt;/span&gt; wherever you want using your phone and the help of community that uses the app.&lt;/p&gt;</description></item><item><title>My campervan conversion</title><link>https://kowalsska.github.io/blog/my-campervan-conversion/</link><pubDate>Sun, 16 Dec 2018 17:28:50 +0100</pubDate><guid>https://kowalsska.github.io/blog/my-campervan-conversion/</guid><description>&lt;style type="text/css"&gt;
  .row {
  display: flex;
- justify-content: space-between;
+ justify-content: center;
+ gap: 15px;
+ margin: 20px -50px;
+ width: calc(100% + 100px);
+ }
+ .row img {
+ flex: 1;
+ height: auto;
+ object-fit: cover;
+ }
+ 
+ @media (max-width: 768px) {
+ .row {
+ flex-direction: column;
+ margin: 20px 0;
+ width: 100%;
+ gap: 15px;
+ }
+ .row img {
+ width: 100%;
+ }
  }
 &lt;/style&gt;
 &lt;p&gt;In June 2017 I got a 2010 Opel Movano with the idea of turning it into a mobile home and moving into and driving it all across Europe(and possibly beyond). Having spent a big chunk of my childhood traveling in a campervan with my family, it seemed like an obvious thing to do. After an initial first month of working on the van I didn&amp;rsquo;t get very far but was super stoked on the idea. In the end it led me to the decision of quitting my job at Morgan Stanley, moving back home to Poland and focusing entirely on the van. My friend came over and stayed for over a month, helping me out throughout the process.
